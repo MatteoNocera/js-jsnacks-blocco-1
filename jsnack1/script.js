@@ -14,28 +14,47 @@ Il software stampa il maggiore.
 
 const firstUserYear = prompt('Inserisci anno di nascita utente 1');
 
-const secondUserYear = prompt('Inserisci anno di nascita utente 2');
+const secondUserYear =prompt('Inserisci anno di nascita utente 2');
 
+console.log(firstUserYear, secondUserYear);
 
-// stabilisci il numero maggiore inserito
-//Stampa il numero maggiore
-
-const titleElement = document.querySelector('h1');
-
-
-if (firstUserYear > secondUserYear) {
-    let result = 'Utente 1 è più grande';
-    console.log(result);
-    titleElement.insertAdjacentHTML('beforeend', result);
-
-} else if (secondUserYear > firstUserYear) {
-    let result = 'Utente 2 è più grande';
-    console.log(result);
-    titleElement.insertAdjacentHTML('beforeend', result);
-
+if ( isNaN(firstUserYear)) {
+    alert('inserisci due date valide');
+    location.reload();
+} else if ( isNaN(secondUserYear)) {
+    alert('inserisci due date valide');
+    location.reload();
+} else if (firstUserYear == 0 || secondUserYear == 0) {
+    alert('inserisci due date valide');
+    location.reload();
+} else if (firstUserYear === '' || secondUserYear === '') {
+    alert('inserisci due date valide');
+    location.reload();
 } else {
-    let result = 'Utente 1 e Utente 2 sono coetanei';
-    console.log(result);
-    titleElement.insertAdjacentHTML('beforeend', result);
+    // stabilisci il numero maggiore inserito
+    //Stampa il numero maggiore
 
+    const titleElement = document.querySelector('h1');
+
+
+    if (firstUserYear > secondUserYear) {
+        let result = 'Utente 1 è più grande';
+        console.log(result);
+        titleElement.insertAdjacentHTML('beforeend', result);
+
+    } else if (secondUserYear > firstUserYear) {
+        let result = 'Utente 2 è più grande';
+        console.log(result);
+        titleElement.insertAdjacentHTML('beforeend', result);
+
+    } else {
+        let result = 'Utente 1 e Utente 2 sono coetanei';
+        console.log(result);
+        titleElement.insertAdjacentHTML('beforeend', result);
+
+    }
 }
+
+
+
+
