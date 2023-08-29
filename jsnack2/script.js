@@ -16,30 +16,37 @@ const firstWord = prompt('Type first word');
 
 const secondWord = prompt('Type second word');
 
-// Individua lunghezza parole
-
-const lengthFirstWord = Number(firstWord.length);
-
-const lengthSecondtWord = Number(secondWord.length);
-
-
-// Stampa parola corta
-// Stampa parola lunga
-
-const h1Element = document.querySelector('h1');
-
-
-
-
-if (lengthFirstWord > lengthSecondtWord) {
-    console.log(secondWord);
-    console.log(firstWord);
-    h1Element.innerHTML = secondWord + ' è più corta di ' + firstWord;
-} else if (lengthSecondtWord > lengthFirstWord) {
-    console.log(firstWord);
-    console.log(secondWord);
-    h1Element.innerHTML = firstWord + ' è più corta di ' + secondWord;
-
+if (firstWord == '' || secondWord =='') {
+    alert('insert two word');
+    location.reload();
 } else {
-    console.log('Le parole hanno la stessa lunghezza');
+    // Individua lunghezza parole
+
+    const lengthFirstWord = Number(firstWord.length);
+
+    const lengthSecondtWord = Number(secondWord.length);
+
+
+    // Stampa parola corta
+    // Stampa parola lunga
+
+    const h1Element = document.querySelector('h1');
+
+
+
+
+    if (lengthFirstWord > lengthSecondtWord) {
+        console.log(secondWord);
+        console.log(firstWord);
+        h1Element.innerHTML = secondWord + ' è più corta di ' + firstWord;
+    } else if (lengthSecondtWord > lengthFirstWord) {
+        console.log(firstWord);
+        console.log(secondWord);
+        h1Element.innerHTML = firstWord + ' è più corta di ' + secondWord;
+
+    } else {
+        console.log('Le parole hanno la stessa lunghezza');
+    }    
 }
+
+
