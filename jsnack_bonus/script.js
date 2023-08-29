@@ -19,6 +19,17 @@ const h1Element = document.querySelector('h1');
 
 for (let i = 0; i < 6; i++) {
     const userNumber = Number(prompt('insert a number between 1 and 10'));
+
+    if (isNaN(userNumber)) {
+        alert('insert numbers between 1 and 10');
+        location.reload();
+    }
+
+    if (userNumber == '') {
+        alert('insert numbers between 1 and 10');
+        location.reload();
+    }
+
     console.log(userNumber);
 
     // se è dispari inseriscilo nell'array
