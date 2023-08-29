@@ -7,16 +7,16 @@ Il programma stampa la somma di tutti i numeri inseriti.
 
 */
 const totalNumbers = [];
+let result = 0;
+const h1Element = document.querySelector('h1');
 
-for (i = 0; i <= 2; i++ ) {
+for (i = 0; i < 10; i++ ) {
+
     const userNumbers = Number(prompt('insert a number between 1 and 10'));
-    //console.log(userNumbers);
 
-    totalNumbers.push(userNumbers);
-    console.log(totalNumbers);
-    
-    
-    
+    console.log(userNumbers);
+    result += userNumbers;
 
-    
 }
+console.log(result);
+h1Element.insertAdjacentHTML('beforeend', 'Il risultato finale è ' + result);
