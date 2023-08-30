@@ -90,9 +90,9 @@ while (i < 2) {
         location.reload();
     } else {
         if (userNumb1 > userNumb2) {
-        console.log(userNumb1);
+        console.log('il numero maggiore è ' + userNumb1);
         } else if (userNumb2 > userNumb1) {
-        console.log(userNumb2);
+        console.log('il numero maggiore è ' + userNumb2);
         } else {
             console.log('patta');
         }
