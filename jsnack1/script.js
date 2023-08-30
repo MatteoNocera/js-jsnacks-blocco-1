@@ -77,16 +77,16 @@ while (i < 2) {
     const userNumb2 = Number(prompt('Insert a number between 1 and 9'));
 
     if ( isNaN(userNumb1)) {
-        alert('inserisci due date valide');
+        alert('inserisci numeri validi');
         location.reload();
     } else if ( isNaN(userNumb2)) {
-        alert('inserisci due date valide');
+        alert('inserisci numeri validi');
         location.reload();
     } else if (userNumb1 == 0 || userNumb2 == 0) {
-        alert('inserisci due date valide');
+        alert('inserisci numeri validi');
         location.reload();
     } else if (userNumb1 === '' || userNumb2 === '') {
-        alert('inserisci due date valide');
+        alert('inserisci numeri validi');
         location.reload();
     } else {
         if (userNumb1 > userNumb2) {

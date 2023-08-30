@@ -8,7 +8,7 @@ Il software stampa prima la parola più corta, poi la parola più lunga.
 
 */
 
-// Utente inserisce parola 1
+/* // Utente inserisce parola 1
 
 const firstWord = prompt('Type first word');
 
@@ -48,5 +48,37 @@ if (firstWord == '' || secondWord =='') {
         console.log('Le parole hanno la stessa lunghezza');
     }    
 }
+ */
 
 
+/* 
+BONUS
+(con while) Snack 2:
+L’utente inserisce due parole in successione, con due prompt.
+Il software stampa prima la parola più corta, poi la parola più lunga.
+
+*/
+
+const word = '';
+const words = []
+let i = 0;
+
+while (i < 2) {
+    const word = prompt('Type first word');
+    
+    words.push(word);
+    console.log(words);
+    i++
+}
+if (words[0].length < words[1].length) {
+
+    console.log(`la parola ${words[0]} è più corta della parola ${words[1]}`)
+    ;
+} else if(words[1].length < words[0].length) {
+
+    console.log(`la parola ${words[1]} è più corta della parola ${words[0]}`);
+
+} else {
+
+    console.log(`le parole ${words[0]} e ${words[1]} hanno la stessa lunghezza`);
+}
