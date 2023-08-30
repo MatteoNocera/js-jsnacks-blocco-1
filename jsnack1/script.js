@@ -12,7 +12,7 @@ Il software stampa il maggiore.
 
 // chiedi all'utente due numeri attraverso il prompt
 
-const firstUserYear = prompt('Inserisci anno di nascita utente 1');
+/* const firstUserYear = prompt('Inserisci anno di nascita utente 1');
 
 const secondUserYear =prompt('Inserisci anno di nascita utente 2');
 
@@ -53,8 +53,52 @@ if ( isNaN(firstUserYear)) {
         titleElement.insertAdjacentHTML('beforeend', result);
 
     }
+} */
+
+
+
+
+/*
+
+BONUS
+
+Da fare con WHILE tutti I prossimi snacks
+Snack 1
+L’utente inserisce due numeri in successione, con due prompt.
+Il software stampa il maggiore.
+
+*/
+
+let i = 0;
+
+while (i < 2) {
+    
+    const userNumb1 = Number(prompt('Insert a number between 1 and 9'));
+    const userNumb2 = Number(prompt('Insert a number between 1 and 9'));
+
+    if ( isNaN(userNumb1)) {
+        alert('inserisci due date valide');
+        location.reload();
+    } else if ( isNaN(userNumb2)) {
+        alert('inserisci due date valide');
+        location.reload();
+    } else if (userNumb1 == 0 || userNumb2 == 0) {
+        alert('inserisci due date valide');
+        location.reload();
+    } else if (userNumb1 === '' || userNumb2 === '') {
+        alert('inserisci due date valide');
+        location.reload();
+    } else {
+        if (userNumb1 > userNumb2) {
+        console.log(userNumb1);
+        } else if (userNumb2 > userNumb1) {
+        console.log(userNumb2);
+        } else {
+            console.log('patta');
+        }
+
+        i++
+    }
+    
+    
 }
-
-
-
-
